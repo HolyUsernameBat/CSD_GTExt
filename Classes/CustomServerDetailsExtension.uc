@@ -8,6 +8,11 @@ function getServerDetails(out GameInfo.serverResponseLine serverState) {
     // let's inject game difficulty to server info
     if (kfgt != none) {
         addSD(serverState, "Difficulty", GetDifficultyName(kfgt.GameDifficulty));
+        addSD(serverState, "GameType", GetAbbrevGameType(kfgt.Acronym));
+        //addSD(serverState, "VotingOption", GetMyVotingOption(kfgt.MapListType));
+        //addSD(serverState, "CurrentMap", GetCurrentMap(kfgt.MapName));
+        //addSD(serverState, "FakedPlayers", GetFakedPlayers(kfgt.MaxPlayers));
+        //addSD(serverState, "BotCount", (NumBots));
     }
 }
 
@@ -26,4 +31,35 @@ private final function string GetDifficultyName(float GameDifficulty) {
         default:
             return "UNKNOWN DIFFICULTY";
     }
+}
+private final function string GetAbbrevGameType(string Acronym) {  
+    return Acronym;
+}
+
+private final function string GetCurrentMap(string MapName) {
+    /*local int DashIndex;
+    
+    // Find the first dash
+    DashIndex = InStr(MapName, "-");
+    
+    // If found at position 2 (like for "KF-" or "GG-")
+    if (DashIndex == 2) {
+        return Mid(MapName, 3);  // Return everything after position 2
+    } */
+    
+    // Return original if no standard prefix found
+    return MapName;
+}
+
+private final function string GetMyVotingOption(string MapListType) {
+    return MapListType;
+}
+
+private final function int GetFakedPlayers(int MaxPlayers) {
+    // if no faked players
+    return MaxPlayers;
+} 
+
+private final function int GetBotCountString(int BotCount) {
+    return BotCount;
 }

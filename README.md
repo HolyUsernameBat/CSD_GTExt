@@ -1,3 +1,12 @@
+DISCLAIMER: As it is I can't get this code to compile, but I'm gonna revisit the issue soon because I think it possibly may be as an issue of where I'm compiling it (local game files vs server) as opposed to bad code, but I wont rule that out either.
+
+It's also nice to have a shareable version of this while i'm debugging...
+
+
+
+This is a fork of the custom server details extension template so I'll also share their readme below:
+
+
 [Custom Server Details]: https://github.com/InsultingPros/CustomServerDetails
 
 # CustomServerDetails Extension
